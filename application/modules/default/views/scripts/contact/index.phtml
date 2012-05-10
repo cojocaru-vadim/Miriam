@@ -1,0 +1,39 @@
+<div class="wrapper">
+<?php if($this->sent == false): ?>
+    <div class="pad">
+            <div class="wrapper"><h2><?php echo  $this->translate('menu-contact'); ?></h2></div>
+    </div>
+    <div class="box pad_bot1">
+        <div class="pad marg_top">
+            <article class="col1">
+                <form id="ContactForm" action="/contact" method="POST">
+                    <div>
+                        <div class="wrapper">
+                            <div class="bg"><input class="input" name="name" type="text"></div><?php echo $this->translate('contact-name'); ?>:
+                        </div>
+                        <div class="wrapper">
+                            <div class="bg"><input class="input" name="email" type="text"></div><?php echo $this->translate('contact-email'); ?>:
+                        </div>
+                        <div class="wrapper">
+                            <div class="bg2"><textarea name="textarea" cols="1" rows="1"></textarea></div><?php echo $this->translate('contact-message'); ?>:
+                        </div>
+                        <a href="#" class="button" onclick="document.getElementById('ContactForm').submit()"><?php echo $this->translate('contact-send'); ?></a>
+                        <a href="#" class="button" onclick="document.getElementById('ContactForm').reset()"><?php echo $this->translate('contact-clear'); ?></a>
+                    </div>
+                </form>
+            </article>
+            <article class="col2 pad_left1">
+                <div class="wrapper">
+                    <?php echo $this->translate('address'); ?>
+                </div>
+            </article>
+        </div>
+    </div>
+    <?php else: ?>
+    <div class="pad">
+        <div class="wrapper">
+            <article class="col1"><h2><?php echo $this->translate('contact-thank-you'); ?></h2></article>
+        </div>
+    </div>
+    <?php endif; ?>
+</div>
