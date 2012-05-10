@@ -1,197 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-
     <?php echo $this->headTitle() ?>
-    <?php echo $this->headLink() ?>
-    <?php echo $this->headScript() ?>
-
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
-    <script type="text/javascript" src="js/html5.js"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/jqtransform.css">
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/cufon-yui.js"></script>
+    <script src="js/vegur_400.font.js"></script>
+    <script src="js/Vegur_bold_700.font.js"></script>
+    <script src="js/cufon-replace.js"></script>
+    <script src="js/tms-0.4.x.js"></script>
+    <script src="js/jquery.jqtransform.js"></script>
+    <script src="js/FF-cash.js"></script>
+    <script>
+		$(document).ready(function(){
+			$('.form-1').jqTransform();
+			$('.slider')._TMS({
+				show:0,
+				pauseOnHover:true,
+				prevBu:'.prev',
+				nextBu:'.next',
+				playBu:false,
+				duration:1000,
+				preset:'fade',
+				pagination:true,
+				pagNums:false,
+				slideshow:7000,
+				numStatus:false,
+				banners:false,
+				waitBannerAnimation:false,
+				progressBar:false
+			})
+		});
+	</script>
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
     <![endif]-->
-<!--    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
-    <script type="text/javascript" src="js/api.js"></script>-->
+    <!--[if lt IE 9]>
+   		<script type="text/javascript" src="js/html5.js"></script>
+    	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+	<![endif]-->
 </head>
-<body id="page1">
+<body>
 <div class="main">
-    <!-- header -->
-    <header>
-        <div class="wrapper">
-            <h1><a href="/" id="logo">Smart Biz</a></h1>
-            <div id="locale">
-                <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'locale', 'action' => 'index', 'locale' => 'ro_MD'), 'default', true); ?>">
-                    <img src="/images/locale/ro_MD.png" />
-                </a>
-                <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'locale', 'action' => 'index', 'locale' => 'ru_RU'), 'default', true); ?>">
-                    <img src="/images/locale/ru_RU.png" />
-                </a>
-                <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'locale', 'action' => 'index', 'locale' => 'en_US'), 'default', true); ?>">
-                    <img src="/images/locale/en_US.png" />
-                </a>
-
-            </div>
+<!--==============================header=================================-->
+<header>
+    <div>
+        <h1><a href="index.html"><img src="images/logo.jpg" alt=""></a></h1>
+        <div class="social-icons">
+        	<span>Follow Us:</span>
+            <a href="#" class="icon-3"></a>
+            <a href="#" class="icon-2"></a>
+            <a href="#" class="icon-1"></a>
         </div>
-        <div class="wrapper">
-            <!--            <div class="text">
-                <span class="text1">Effective<span>business solutions</span></span>
-                <a href="#" class="button">read more</a>
-            </div>-->
-            <div class="slider-wrapper theme-default">
-                <div class="ribbon"></div>
-                <div id="slider" class="nivoSlider">
-                    <img src="images/Untitled.jpg" alt="" />
-                    <img src="images/Untitled1.jpg" alt="" />
-                </div>
+        <div id="slide">
+            <div class="slider">
+                <ul class="items">
+                    <li><img src="images/slider-1.jpg" alt="" /></li>
+                    <li><img src="images/slider-2.jpg" alt="" /></li>
+                    <li><img src="images/slider-3.jpg" alt="" /></li>
+                </ul>
             </div>
+            <a href="#" class="prev"></a><a href="#" class="next"></a>
         </div>
-<!--        <nav>
-            <ul id="menu">
-                <li class="alpha" id="menu_active"><a href="index.html"><span><span>Home</span></span></a></li>
-                <li><a href="About.html"><span><span>About</span></span> </a></li>
-                <li><a href="Projects.html"><span><span>Projects</span></span></a></li>
-                <li><a href="Contacts.html"><span><span>Contacts</span></span></a></li>
-                <li class="omega"><a href="Sitemap.html"><span><span>Sitemap</span></span></a></li>
+        <nav>
+            <ul class="menu">
+                <li class="current"><a href="/">Acasa</a></li>
+                <li><a href="/about">Despre noi</a></li>
+                <li><a href="/products">Produse</a></li>
+                <li><a href="/news">Noutati</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
-        </nav>-->
-        <!-- Menu structure example -->
-        <div id="myMenu" class="nfPure nfMain" style="width:920px;">
-
-            <div class="nfItem"><h2><a class="nfLink" href="/"><span id="gn_home"><?php echo  $this->translate('menu-home'); ?></span></a></h2></div>
-
-            <div class="nfItem"><h2><a class="nfLink" href="#"><span id="gn_facade"><?php echo  $this->translate('menu-facade'); ?></span></a></h2>
-                <div class="nfSubC"><ul class="nfSubS">
-                    <li class="nfItem"><a class="nfLink" href="/siding"><?php echo  $this->translate('menu-siding'); ?></a></li>
-                    <li class="nfItem"><a class="nfLink" href="/sofit"><?php echo  $this->translate('menu-sofit'); ?></a></li>
-                    <li class="nfItem"><a class="nfLink" href="/siding-color-chooser"><?php echo  $this->translate('menu-siding-color-chooser'); ?></a></li>
-                </div>
-            </div>
-
-
-            <div class="nfItem"><h2><a class="nfLink" href="#"><span id="gn_walls"><?php echo  $this->translate('menu-walls-roofs'); ?></span></a></h2>
-                <div class="nfSubC"><ul class="nfSubS">
-                    <li class="nfItem"><a class="nfLink" href="/walls-accessory"><?php echo  $this->translate('menu-walls-accessory'); ?></a></li>
-                    <li class="nfItem"><a class="nfLink" href="/walls-panels"><?php echo  $this->translate('menu-walls-panels'); ?></a></li>
-                </ul>
-                </div>
-            </div>
-
-            <div class="nfItem"><h2><a class="nfLink" href="#"><span id="gn_windows"><?php echo  $this->translate('menu-windows'); ?></span></a></h2>
-                <div class="nfSubC"><ul class="nfSubS">
-                    <li class="nfItem"><a class="nfLink" href="/window"><?php echo  $this->translate('menu-window'); ?></a></li>
-                    <li class="nfItem"><a class="nfLink" href="/window-ebb"><?php echo  $this->translate('menu-ebb'); ?></a></li>
-                </ul>
-                </div>
-            </div>
-            <!--pipes-pvs means cerepita-->
-            <div class="nfItem"><h2><a class="nfLink" href="/pipes-pvs"><span id="gn_pipes"><?php echo  $this->translate('menu-pipes-pvs'); ?></span></a></h2>
-                <div class="nfSubC"><ul class="nfSubS">
-<!--                    <li class="nfItem"><a class="nfLink" href="/pipes-accessory"><?php /*echo  $this->translate('menu-pipes-accessory'); */?></a></li>
-                    <li class="nfItem"><a class="nfLink" href="/pipes-pvs"><?php /*echo  $this->translate('menu-pipes-pvs'); */?></a></li>-->
-                </ul>
-                </div>
-            </div>
-
-            <div class="nfItem"><h2><a class="nfLink" href="#"><span id="gn_prices"><?php echo  $this->translate('menu-prices'); ?></span></a></h2></div>
-
-            <div class="nfItem"><h2><a class="nfLink" href="#"><span id="gn_company"><?php echo  $this->translate('menu-company'); ?></span></a></h2>
-                <div class="nfSubC"><ul class="nfSubS">
-                    <li class="nfItem"><a class="nfLink" href="/about"><?php echo  $this->translate('menu-about-company'); ?></a></li>
-                    <!--<li class="nfItem"><a class="nfLink" href="#"><?php /*echo  $this->translate('menu-market-outlet'); */?></a></li>-->
-                </ul>
-                </div>
-            </div>
-
-            <div class="nfItem"><h2><a class="nfLink" href="/contact"><span id="gn_phones"><?php echo  $this->translate('menu-contact'); ?></span></a></h2></div>
-
-        </div>
-    </header>
-    <!-- / header -->
-    <!-- content -->
-    <section id="content">
-        <?php echo $this->layout()->content ?>
-    </section>
-    <!-- / content -->
-    <!-- footer -->
-    <footer>
-        <a href="/">&copy; Fasade.md <?php echo date('Y'); ?></a><br />
-    </footer>
-    <!-- / footer -->
+        </nav>
+    </div>
+</header>
+<!--==============================header=================================-->
+<!--==============================content================================-->
+    <?php echo $this->layout()->content ?>
+<!--==============================content================================-->
 </div>
-<script type="text/javascript"> Cufon.now(); </script>
-<script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
-</script>
-
-<!--Create a new menu object and activate it (place this script after the structure or attach to an onload type event)-->
-<script type="text/javascript">
-
-
-    //Menu configuration properties (hide and show timers in Milliseconds)
-    var config = {showTimerMS:250,hideTimerMS:250,stickyHover:true};
-
-    //Pass the menu object construcor an ID or object representing the root node of your structure
-    var myMenu = new NF.widget.menu("myMenu", config);
-
-    //set the default delay timer for the menus playerSynchronizer animations
-    NF.anim.playerSynchronizer.delay = 15;
-
-
-    /*~~~~~~~~ Hover Effect - Level 1~~~~~~~~~~~~~*/
-    var hovClip = new NF.anim.clip({backgroundColor:{start:"#000000",end:"#990101"}},{frames:5,hook:"NFplayOnLinkHoverShow"});
-    myMenu.addReplicator(new NF.replicator("transition",{master:hovClip,widgetClass:"nfItem",targetClass:"nfLink",widgetLevel:"level==1"}));
-
-    hovClip = new NF.anim.clip({backgroundColor:{start:"#990101",end:"#000000"}},{frames:40,hook:"NFplayOnLinkHoverHide"});
-    myMenu.addReplicator(new NF.replicator("transition",{master:hovClip,widgetClass:"nfItem",targetClass:"nfLink",widgetLevel:"level==1"}));
-
-
-    /*~~~~~~~~ Hover Effect - Level 2~~~~~~~~~~~~~*/
-    var hovClip = new NF.anim.clip({backgroundColor:{start:"#222222",end:"#990101"}},{frames:5,reset:true,hook:"NFplayOnLinkHoverShow"});
-    myMenu.addReplicator(new NF.replicator("transition",{master:hovClip,widgetClass:"nfItem",targetClass:"nfLink",widgetLevel:"level==2"}));
-
-    hovClip = new NF.anim.clip({backgroundColor:{start:"#990101",end:"#222222"}},{frames:40,reset:true,hook:"NFplayOnLinkHoverHide"});
-    myMenu.addReplicator(new NF.replicator("transition",{master:hovClip,widgetClass:"nfItem",targetClass:"nfLink",excludeClass:"nfParentLink",widgetLevel:"level==2"}));
-
-
-    /*~~~~~~~~ Show Subs Effect - Lev 1 ~~~~~~~~~~~~~*/
-    var clip = new NF.anim.clip({opacity:{start:0, end:1}}, {frames:10,reset:true,hook:"NFplayOnSubShow"});
-    var subAnim_Show_Replicator = new NF.replicator("transition", {master:clip,widgetClass:"nfSubC",widgetLevel:'level==1'});
-    myMenu.addReplicator(subAnim_Show_Replicator);
-
-
-    /*~~~~~~~~ Hide Subs Effect - Lev 1 ~~~~~~~~~~~~~*/
-    clip = new NF.anim.clip({opacity:{start:1, end:0}}, {frames:10,reset:true,hook:"NFplayOnSubHide"});
-    var subAnim_Hide_Replicator = new NF.replicator("transition", {master:clip,widgetClass:"nfSubC",widgetLevel:'level==1'});
-    myMenu.addReplicator(subAnim_Hide_Replicator);
-
-
-    /*~~~~~~~~ Show Subs Effect - Lev 2+ ~~~~~~~~~~~~~*/
-    var clip1 = new NF.anim.clip({opacity:{start:0, end:1}}, {frames:10,reset:true,hook:"NFplayOnSubShow"});
-    var clip2 = new NF.anim.clip({clip:{start:{value:'0% 0% 0% 0%', refNode:"self"}, end:{value:'0% 100% 100% 0%', refNode:"self"}}}, {frames:12,reset:true,hook:"NFplayOnSubShow"});
-    var timeline = new NF.anim.timeline(clip1,'NFplayOnSubShow');
-    timeline.addTrack(clip2);
-    var subAnim_Show_Replicator = new NF.replicator("transition", {master:timeline,widgetClass:"nfSubC",widgetLevel:'level>1'});
-    myMenu.addReplicator(subAnim_Show_Replicator);
-
-
-    /*~~~~~~~~ Hide Subs Effect - Lev 2+ ~~~~~~~~~~~~~*/
-    clip1 = new NF.anim.clip({opacity:{start:1, end:0}}, {frames:10,reset:true,hook:"NFplayOnSubHide"});
-    clip2 = new NF.anim.clip({clip:{start:{value:'0% 100% 100% 0%', refNode:"self"}, end:{value:'0% 0% 0% 0%', refNode:"self"}}}, {frames:12,reset:true,hook:"NFplayOnSubHide"});
-    timeline = new NF.anim.timeline(clip1,'NFplayOnSubHide');
-    timeline.addTrack(clip2);
-    var subAnim_Hide_Replicator = new NF.replicator("transition", {master:timeline,widgetClass:"nfSubC",widgetLevel:'level>1'});
-    myMenu.addReplicator(subAnim_Hide_Replicator);
-
-
-    //Activate the menu
-    myMenu.activate();
-
-
-
-
+<!--==============================footer=================================-->
+    <footer>
+        <p>© 2012 Real Estate</p>
+        <p><a rel="nofollow" href="http://templatemonster.com" target="_blank">Website Template</a> by TemplateMonster.com</p>
+		<p>More <a href="http://www.websitetemplatesonline.com" title="WTO - web templates and Flash templates" target="_blank">Free Website Templates</a> at WTO. Spectacular <a href="http://www.flashtemplates.com/" title="Flash Templates">Flash Templates</a> Design.</p>
+    </footer>
+<script>
+	Cufon.now();
 </script>
 </body>
 </html>
