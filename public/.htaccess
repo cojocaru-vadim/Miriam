@@ -7,6 +7,7 @@
 
 #Options +FollowSymLinks
 RewriteEngine On
+RewriteBase /
 #RewriteCond %{http_host} ^delta.md
 #RewriteRule ^(.*) http://www.delta.md/$1 [R=301,L,nc]
 
