@@ -1,5 +1,6 @@
 <?php
 
+//phpinfo();die;
 //echo "Here"; die;
 
 //echo get_include_path();

@@ -1,11 +1,77 @@
 <?php /*$this->headTitle()->append($this->translate('main-page')); */?>
-<div class="wrapper">
-    <div class="pad">
-        <div class="wrapper"><h2><?php echo  $this->translate('menu-home'); ?></h2></div>
-    </div>
-    <div class="box pad_bot1 bot">
-        <div class="pad marg_top">
-            <?php echo  $this->translate('about'); ?>
+<section id="content"><div class="ic"></div>
+    <div class="container_12">
+      <div class="grid_8">
+        <h2 class="top-1 p3">Welcome message!</h2>
+        <p class="p2">Real Estate is one of <a href="http://blog.templatemonster.com/free-website-templates/" target="_blank" class="link">free website templates</a> created by TemplateMonster.com team. This website template is optimized for 1280X1024 screen resolution. It is also XHTML &amp; CSS valid.</p>
+        <p class="line-1">Download the basic package of this <a href="http://blog.templatemonster.com/2012/04/09/free-website-template-real-estate-justslider/" target="_blank" class="link">Real Estate Template</a> (without PSD source) that is available for anyone without registration. If you need PSD source files, please go to the template download page at TemplateMonster to leave the e-mail address that you want the free template ZIP package to be delivered to.</p>
+        <h2 class="p4">Buyers. Sellers. Proprietors. Agents.</h2>
+        <div class="wrap block-1">
+            <div>
+                <img src="images/page1-img1.jpg" alt="" class="img-border">
+                <h3>Selling</h3>
+                <p>Nam liber tempor cum soluta no eleifend option congue nihil imperdiet doming iquod mazim placerat.</p>
+                <a href="#" class="button">More</a>
+            </div>
+            <div>
+                <img src="images/page1-img2.jpg" alt="" class="img-border">
+                <h3>Investing</h3>
+                <p>Nam liber tempor cum soluta no eleifend option congue nihil imperdiet doming iquod mazim placerat.</p>
+                <a href="#" class="button">More</a>
+            </div>
+            <div class="last">
+                <img src="images/page1-img3.jpg" alt="" class="img-border">
+                <h3>Renting</h3>
+                <p>Nam liber tempor cum soluta no eleifend option congue nihil imperdiet doming iquod mazim placerat.</p>
+                <a href="#" class="button">More</a>
+            </div>
         </div>
+      </div>
+      <div class="grid_4">
+        <div class="left-1">
+            <h2 class="top-1 p3">Find your home</h2>
+            <form id="form-1" class="form-1 bot-1">
+                <div class="select-1">
+                    <label>Home type</label>
+                    <select name="select" >
+                        <option>Homes for sale</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Location</label>
+                    <input type="text" value="Address, City, Zip" onBlur="if(this.value=='') this.value='Address, City, Zip'" onFocus="if(this.value =='Address, City, Zip' ) this.value=''"  />
+                </div>
+                <div class="select-2">
+                    <label>Beds</label>
+                    <select name="select" >
+                        <option>&nbsp;</option>
+                    </select>
+                </div>
+                <div class="select-2 last">
+                    <label>Baths</label>
+                    <select name="select" >
+                        <option>&nbsp;</option>
+                    </select>
+                </div>
+                <a onClick="document.getElementById('form-1').submit()" class="button">Search</a>
+                <div class="clear"></div>
+            </form>
+            <h2 class="p3">Find our office</h2>
+            <img src="images/page1-img4.png" alt="">
+            <div class="lists">
+                <ul class="list-1">
+                    <li><a href="#">Asia</a></li>
+                    <li><a href="#">Australia</a></li>
+                    <li><a href="#">Africa</a></li>
+                </ul>
+                <ul class="list-1 last">
+                    <li><a href="#">North America</a></li>
+                    <li><a href="#">Europe</a></li>
+                    <li><a href="#">Latin America</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <div class="clear"></div>
     </div>
-</div>
+</section>
