@@ -1,39 +1,62 @@
 <div class="wrapper">
 <?php if($this->sent == false): ?>
-    <div class="pad">
-            <div class="wrapper"><h2><?php echo  $this->translate('menu-contact'); ?></h2></div>
-    </div>
-    <div class="box pad_bot1">
-        <div class="pad marg_top">
-            <article class="col1">
-                <form id="ContactForm" action="/contact" method="POST">
-                    <div>
-                        <div class="wrapper">
-                            <div class="bg"><input class="input" name="name" type="text"></div><?php echo $this->translate('contact-name'); ?>:
-                        </div>
-                        <div class="wrapper">
-                            <div class="bg"><input class="input" name="email" type="text"></div><?php echo $this->translate('contact-email'); ?>:
-                        </div>
-                        <div class="wrapper">
-                            <div class="bg2"><textarea name="textarea" cols="1" rows="1"></textarea></div><?php echo $this->translate('contact-message'); ?>:
-                        </div>
-                        <a href="#" class="button" onclick="document.getElementById('ContactForm').submit()"><?php echo $this->translate('contact-send'); ?></a>
-                        <a href="#" class="button" onclick="document.getElementById('ContactForm').reset()"><?php echo $this->translate('contact-clear'); ?></a>
-                    </div>
+    <section id="content"><div class="ic"></div>
+        <div class="container_12">
+            <div class="grid_8">
+                <h2 class="top-1 p3">Contact form</h2>
+                <form id="form" method="post" >
+                    <fieldset>
+                        <label><strong>Your Name:</strong><input type="text" value=""></label>
+                        <label><strong>Your E-mail:</strong><input type="text" value=""></label>
+                        <label><strong>Your Message:</strong><textarea></textarea></label>
+                        <div class="btns"><a href="#" class="button">Clear</a><a href="#" class="button" onClick="document.getElementById('form').submit()">Send</a></div>
+                    </fieldset>
                 </form>
-            </article>
-            <article class="col2 pad_left1">
-                <div class="wrapper">
-                    <?php echo $this->translate('address'); ?>
+            </div>
+            <div class="grid_4">
+                <div class="left-1">
+                    <h2 class="top-1 p3">Find your home</h2>
+                    <form id="form-1" class="form-1 bot-2">
+                        <div class="select-1">
+                            <label>Home type</label>
+                            <select name="select" >
+                                <option>Homes for sale</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Location</label>
+                            <input type="text" value="Address, City, Zip" onBlur="if(this.value=='') this.value='Address, City, Zip'" onFocus="if(this.value =='Address, City, Zip' ) this.value=''"  />
+                        </div>
+                        <div class="select-2">
+                            <label>Beds</label>
+                            <select name="select" >
+                                <option>&nbsp;</option>
+                            </select>
+                        </div>
+                        <div class="select-2 last">
+                            <label>Baths</label>
+                            <select name="select" >
+                                <option>&nbsp;</option>
+                            </select>
+                        </div>
+                        <a onClick="document.getElementById('form-1').submit()" class="button">Search</a>
+                        <div class="clear"></div>
+                    </form>
+                    <h2 class="p3">Our contacts</h2>
+                    <dl>
+                        <dt class="color-1 p2"><strong>8901 Marmora Road,<br>Glasgow, D04 89GR.</strong></dt>
+                        <dd><span>Freephone:</span>+1 800 559 6580</dd>
+                        <dd><span>Telephone:</span>+1 959 603 6035</dd>
+                        <dd><span>E-mail:</span><a href="#" class="link">mail@demolink.org</a></dd>
+                    </dl>
                 </div>
-            </article>
+            </div>
+            <div class="clear"></div>
         </div>
-    </div>
+    </section>
     <?php else: ?>
-    <div class="pad">
         <div class="wrapper">
-            <article class="col1"><h2><?php echo $this->translate('contact-thank-you'); ?></h2></article>
+            <h2><?php echo $this->translate('contact-thank-you'); ?></h2>
         </div>
-    </div>
     <?php endif; ?>
 </div>
